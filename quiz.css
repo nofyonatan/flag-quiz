@@ -78,6 +78,7 @@ body {
     position: absolute;
     top: 23px;
     right: 20px;
+    margin-left: 3px;
 }
 
 #next-question {
