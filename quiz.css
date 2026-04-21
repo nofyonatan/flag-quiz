@@ -1,0 +1,146 @@
+body {
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    margin: 0;
+    height: 100vh;
+}
+
+#quiz-container {
+    position: relative;
+    /* width: 400px; */
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#quiz-container h1 {
+    margin: 5px;
+    color: #333;
+}
+
+#flag-image {
+    /* width: 280px; */
+    width: 71%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+
+#quiz-container button {
+    background: gray;
+    color: white;
+    /* width: 280px; */
+    width: 71%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#quiz-container button:hover {
+    background: lightgray;
+    transform: scale(1.03);
+}
+
+#quiz-container button:active {
+    transform: scale(0.98);
+}
+
+#questions {
+    position: absolute;
+    top: 23px;
+    right: 20px;
+}
+
+#next-question {
+    background-color: orange !important;
+    position: absolute;
+    bottom: 10px;
+}
+
+#next-question:hover {
+    background-color: darkorange !important;
+}
+
+#endScreen {
+    position: fixed;
+    top: 34px;
+    left: auto;
+    /* width: 460px; */
+    width: 90%;
+    max-width: 460px;
+    height: 91%;
+    max-height: 660px;
+
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+#endScreen.show {
+    display: flex;
+}
+
+#questions-finish {
+    font-size: 32px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 10px rgba(0,0,0,0.3);
+
+    letter-spacing: 1px;
+    line-height: 1.4;
+
+    animation: fadePop 1s ease;
+}
+
+@keyframes fadePop {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#restartBtn {
+    margin-top: 40px;
+    padding: 12px 24px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#restartBtn:hover {
+    transform: scale(1.1);
+}
+
+#restartBtn:active {
+    transform: scale(0.98);
+}
